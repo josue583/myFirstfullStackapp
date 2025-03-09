@@ -2,7 +2,7 @@ import mongoose from "mongoose"
 
 
 
-const userSchema=new mongoose.Schema({
+const userSchema=new mongoose.Schema([{
     name:{
         type:String,
         Required:true
@@ -17,5 +17,5 @@ const userSchema=new mongoose.Schema({
     Required:true
 
     }
-})
+}])
 export default mongoose.model("Users",userSchema)

@@ -11,7 +11,7 @@ export const createUser = async (req, res) => {
            return res.status(400).json({message:"user arleady exist"})
         }
         const saveData=await newUser.save()
-       res.status(200).json({message:"user created successfull",saveData})
+       res.status(200).json({message:"user created successfull"})
         
     } catch (error) {
         res.status(500).json({message:"user not created",error})
@@ -25,7 +25,7 @@ export const getAllusers=async (req,res) => {
             res.status(400).json({message:"no data saved in database"});
         }
         else{
-            res.status(200).json({message:"data retreived successfull", userData})
+            res.status(200).json( userData)
         }
         
     } catch (error) {

@@ -3,11 +3,13 @@ import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import route from './Routes/userRoute.js'; // Ensure correct import
+import cors from 'cors'
 
 dotenv.config();
 
 const app = express();
 app.use(bodyParser.json()); // Allows parsing JSON requests
+app.use(cors())
 
 const PORT = process.env.PORT||7000
 const MONGO_URL = process.env.MONGO_URL;
